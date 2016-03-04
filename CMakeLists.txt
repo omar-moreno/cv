@@ -15,5 +15,9 @@ project(cv NONE)
 # document.
 include(UseLATEX.cmake)
 
+set(PDFLATEX_COMPILER xelatex)
+
 # Add the document to the build
-add_latex_document(cv.tex)
+add_latex_document(cv.tex
+    BIBFILES publications.bib 
+)

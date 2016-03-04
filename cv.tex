@@ -1,0 +1,258 @@
+%
+% cv.tex
+% @author Omar Moreno
+% @date March 01, 2016
+%
+
+\documentclass[11pt]{article}
+
+%%%%%%%%%%%%%%%%
+%   Packages   %
+%%%%%%%%%%%%%%%%
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[top=1.0in, bottom=1.0in, left=0.5in, right=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage[none]{hyphenat}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome}
+\usepackage{changepage}
+
+\pagenumbering{gobble}
+
+% Use the font Computer Modern Sans Serif
+\renewcommand*{\familydefault}{\sfdefault}
+
+% Define Dim Gray color 
+\definecolor{dimgray}{HTML}{696969}
+\definecolor{indigodye}{HTML}{0D4F8B}
+
+%
+% resumesection : Command used to denote a new section of the CV
+% 
+% #1 Name of the section
+%
+\newcommand{\cvsection}[1] {
+    \noindent
+    \textcolor{indigodye}{\rule{.15\textwidth}{.1in} \hspace{0.01 \textwidth} \textbf{\Large{#1}}} \newline
+}
+
+\newcommand{\educationentry}[6] { 
+    \noindent
+    \begin{minipage}[t]{0.15\textwidth} \begin{flushright} #1 \end{flushright} \end{minipage} \hspace{0.01\textwidth}
+    \begin{minipage}[t]{0.84\textwidth} 
+        \textbf{#2}, \emph{#3}, #4 \newline 
+        #5 \newline
+        Advisor: #6 \newline 
+    \end{minipage}
+}
+
+\newcommand{\experienceentry}[5] { 
+    \noindent
+    \begin{minipage}[t]{0.15\textwidth} \begin{flushright} #1 \end{flushright} \end{minipage} \hspace{0.01\textwidth}
+    \begin{minipage}[t]{0.84\textwidth} 
+        \textbf{#2} \newline
+        \emph{#3}, #4 
+    \end{minipage} \\[0.01pt]
+    #5 \vspace{11pt}
+}
+
+\newcommand{\skillsentry}[2] { 
+    \noindent
+    \begin{minipage}[t]{0.15\textwidth} \begin{flushright} #1 \end{flushright} \end{minipage} \hspace{0.01\textwidth}
+    \begin{minipage}[t]{0.84\textwidth} #2 \end{minipage}
+}
+
+\newcommand{\awardentry}[3] { 
+    \noindent
+    \begin{minipage}[t]{0.15\textwidth} \begin{flushright} #1 \end{flushright} \end{minipage} \hspace{0.01\textwidth}
+    \begin{minipage}[t]{0.84\textwidth} #2 \hfill \newline
+        \emph{#3} 
+    \end{minipage}
+}
+
+\newcommand{\teachingentry}[4] { 
+    \noindent
+    \begin{minipage}[t]{0.15\textwidth} \begin{flushright} #1 \end{flushright} \end{minipage} \hspace{0.01\textwidth}
+    \begin{minipage}[t]{0.84\textwidth}
+        \textbf{#2} \newline
+        #3  
+    \end{minipage} \\[0.01pt]
+    #4 \vspace{11pt}
+}
+
+
+\renewcommand{\section}[2]{}
+
+\begin{document}
+    
+    %%%%%%%%%%%%%%
+    %   Header   %
+    %%%%%%%%%%%%%%
+    \noindent
+    \begin{minipage}[c]{0.5\textwidth}
+        \begin{flushleft}
+            \Huge{Omar Moreno} \newline
+            \Large{\textcolor{dimgray}{Curriculum Vitae}}
+        \end{flushleft}
+    \end{minipage}
+    \begin{minipage}[c]{0.50\textwidth}
+        \begin{flushright}
+            \color{dimgray} \em
+            Sunnyvale, CA           \\
+            \faMobilePhone \hspace{1pt} +1 (562) 396-1622       \\
+            \faEnvelope \hspace{1pt} \href{mailto:omoreno1@ucsc.edu}{omoreno1@ucsc.edu}          \\
+            \faLinkedin \hspace{1pt} \href{https://www.linkedin.com/in/omarmoreno2}{omarmoreno2} \\
+            \faGithub \hspace{1pt} \href{https://github.com/omar-moreno}{omar-moreno}            \\
+        \end{flushright}
+    \end{minipage}
+
+    \cvsection{Education}
+        \educationentry{(Expected) 2016}
+                       {Ph.D. in Physics}
+                       {University of California at Santa Cruz}
+                       {Santa Cruz, CA}
+                       {Dissertation: Resonance Search for a New Gauge Boson}
+                       {Bruce Schumm}
+        \educationentry{2007-2009}
+                       {M.Sc. in Physics}
+                       {California State University, Los Angeles}
+                       {Los Angeles, CA}
+                       {Thesis: Measurement of the Analyzing Power for the Reactions $p + CH_{2}
+                       \rightarrow X$ at a \\ Proton Momentum of 2.2032 GeV/c}
+                       {Konrad Aniol} 
+        \educationentry{2001-2006}
+                       {B.Sc. in Applied Physics}
+                       {University of California at Irvine}
+                       {Irvine, CA}
+                       {Thesis: Search for the $B\rightarrow e^+e^-$ as a Hint to Supersymmetry}
+                       {David Kirkby}
+
+    \cvsection{Research Experience}
+        \experienceentry{2011-present}
+                        {Graduate Student Researcher, Heavy Photon Search Collaboration}
+                        {Santa Cruz Institute for Particle Physics}
+                        {Santa Cruz, CA}
+                        {   
+                            \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
+                              \item Utilized frequentist statistical analysis to conduct a resonance search for a new
+                                    fundamental particle, heavy photon, thought to mediate dark matter 
+                                    interactions.
+                              \item Developed maximum likelihood fitter to determine the parameters of a model 
+                                    describing Quantum Electrodynamics Trident background.
+                              \item Applied machine learning techniques to optimize the selection of signal like 
+                                    events using a Random Forest Algorithm in Scikit-Learn, boosting the 
+                                    signal/background fraction by 40\%.
+                              \item Co-creator of both a C++ and Java analysis pipeline used to process, clean up,
+                                    and visualize over 10 TB of noisy data (detector output).
+                              \item Developed Java front end used to load and retrieve greater than 100,000 
+                                    calibration constants from a MySQL database.
+                              \item Heavily involved in the testing and commissioning of the Heavy Photon Search data
+                                    acquisition system.
+                              \item Characterized the performance of several components of the HPS Silicon Vertex Tracker
+                                    including the APV25 readout chips and silicon microstrip modules at various stages
+                                    of production.
+                          \end{itemize} 
+                      } 
+        \experienceentry{2009-2011}
+                        {Graduate Student Researcher, International Linear Collider}
+                        {Santa Cruz Institute for Particle Physics}
+                        {Santa Cruz, CA}
+                        {
+                            \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
+                                \item Characterized the performance of the Long Shaping Time Front End readout chip at
+                                      various stages of development.
+                                \item Mentored several undergraduate students on various projects.
+                            \end{itemize}
+                        } 
+        \experienceentry{2007-2009}
+                        {Graduate Student Researcher}
+                        {Department of Physics and Astronomy, California State University, Los Angeles}
+                        {Los Angeles, CA}
+                        {
+                            \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
+                                \item Developed C++ analysis used to optimize detector selection criteria using regression
+                                      techniques and frequentist inference resulting in an improved understanding of the
+                                    interaction of the proton in polyethylene.
+                                \item Developed maximum likelihood fitter to determine the parameters of a model describing
+                                      the polarization of the proton.
+                                \item Performed statistical analysis to measure the form factor ratio, $G_{E_p}/G_{M_p}$, of
+                                      the proton using blind analysis techniques.
+                            \end{itemize}
+                        }  
+        \experienceentry{2005-2006}
+                        {Undergraduate Researcher}
+                        {Department of Physics and Astronomy, University of California, Irvine}
+                        {Irvine, CA}
+                        { 
+                            \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
+                                \item Developed analysis to measure the branching fraction for the extremely rare decay 
+                                      $B\rightarrow e^+e^-$ using blind analysis and regression techniques.
+                                \item Used a neural network to boost the identification of the particle decay 
+                                      $\Lambda \rightarrow p \pi^-$ by 10\%.
+                                \item Utilized C++ to analyze, visualize, and clean up over 1 TB of noisy data.
+                            \end{itemize}
+                       } 
+        \experienceentry{2000-2001}
+                        {Mechanical Engineering Apprentice}
+                        {Nasa Dryden Flight Research Center}
+                        {Edwards, CA}
+                        {
+                            \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
+                                \item Designed and constructed a device used to evaluate the skin-friction reduction 
+                                      of several Micro-Blowing Technique skins at supersonic speeds. 
+                            \end{itemize}
+                        } 
+    
+    \cvsection{Skills}
+        \skillsentry{Prog. Languages}{Java, C++, C, Python, MySQL, XML, Mathematica. Familiar with with HTML5 and Fortran}
+        \skillsentry{Tools}{Linux, NumPy, Matplotlib, scikit-learn, git, SVN, CMake, IPython, \LaTeX, ROOT, RooFit}
+        \skillsentry{Languages}{Fluent in English and Spanish}
+
+    \cvsection{Fellowships and Honors}
+        \awardentry{2012}{Margaret Burbidge Award for Best Experimental Research}{American Physical Society} 
+        \awardentry{2011}{GAANN Fellowship}{University of California, Santa Cruz}
+        \awardentry{2009}{Special Recognition in Graduate Studies}
+                         {California State University, Los Angeles}
+        \awardentry{2009}{Margaziotis Award for Best Experimental Research}
+                         {California State University, Los Angeles}
+        \awardentry{2007-2009}{Louis Stokes Alliance for Minority Participation Bridge to the Doctorate Fellowship}
+                              {National Science Foundation} 
+        \awardentry{2006}{California Alliance for Minority Participation Mentor of the Year}
+                         {University of California, Irvine}
+        \awardentry{2006}{Special Merit in Research}
+                         {University of California, Irvine}
+        \awardentry{2001-2002}{Chancellor's Leadership Scholar}
+                         {University of California, Irvine}
+
+    \cvsection{Teaching Experience}
+        \teachingentry{2013-2015}{GRE Physics Bootcamp Instructor}
+                      {Department of Physics, University of California, Santa Cruz}
+                      {}
+
+        \teachingentry{2009-2011}{Graduate Teaching Assistant}
+                      {Department of Physics, University of California, Santa Cruz}
+                      {
+                        \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
+                            \item Physics 6A - Mechanics                                 
+                            \item Physics 6B - Waves and Thermodynamics                  
+                            \item Physics 6C - Electricity and Magnetism                
+                          \end{itemize}
+                      }
+
+        \teachingentry{2007}{Graduate Teaching Assistant}
+                      {Department of Physics and Astronomy, California State University, Los Angeles}
+                      {  
+                        \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
+                            \item Physics 211 - Classical Mechanics                      
+                            \item Physics 212 - Waves and Thermodynamics                 
+                            \item Physics 213 - Electricity and Magnetism 
+                        \end{itemize}
+                      }
+
+    \cvsection{Publications}
+
+    \bibliography{publications}
+    \bibliographystyle{unsrt}
+    \nocite{*}
+
+\end{document}
