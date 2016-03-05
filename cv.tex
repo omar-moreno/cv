@@ -33,7 +33,7 @@
 %
 \newcommand{\cvsection}[1] {
     \noindent
-    \textcolor{indigodye}{\rule{.15\textwidth}{.1in} \hspace{0.01 \textwidth} \textbf{\Large{#1}}} \newline
+    \textcolor{indigodye}{\rule{.15\textwidth}{.1in} \hspace{0.01 \textwidth} \textbf{\Large{#1}}} \newline 
 }
 
 \newcommand{\educationentry}[6] { 
@@ -65,8 +65,7 @@
 \newcommand{\awardentry}[3] { 
     \noindent
     \begin{minipage}[t]{0.15\textwidth} \begin{flushright} #1 \end{flushright} \end{minipage} \hspace{0.01\textwidth}
-    \begin{minipage}[t]{0.84\textwidth} #2 \hfill \newline
-        \emph{#3} 
+    \begin{minipage}[t]{0.84\textwidth} #2,  \emph{#3} 
     \end{minipage}
 }
 
@@ -134,11 +133,9 @@
                         {Santa Cruz, CA}
                         {   
                             \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
-                              \item Utilized frequentist statistical analysis to conduct a resonance search for a new
-                                    fundamental particle, heavy photon, thought to mediate dark matter 
+                              \item Utilized frequentist statistical analysis and maximum likelihood estimation to conduct a 
+                                    resonance search for a new fundamental particle, heavy photon, thought to mediate dark matter 
                                     interactions.
-                              \item Developed maximum likelihood fitter to determine the parameters of a model 
-                                    describing Quantum Electrodynamics Trident background.
                               \item Applied machine learning techniques to optimize the selection of signal like 
                                     events using a Random Forest Algorithm in Scikit-Learn, boosting the 
                                     signal/background fraction by 40\%.
@@ -146,11 +143,13 @@
                                     and visualize over 10 TB of noisy data (detector output).
                               \item Developed Java front end used to load and retrieve greater than 100,000 
                                     calibration constants from a MySQL database.
-                              \item Heavily involved in the testing and commissioning of the Heavy Photon Search data
-                                    acquisition system.
-                              \item Characterized the performance of several components of the HPS Silicon Vertex Tracker
+                              \item Tested and commissioned the Heavy Photon Search (HPS) Silicon Vertex Tracker (SVT) data
+                                    acquisition system used to continuously read out 23004 channels at a rate of up to
+                                    50 kHz.
+                              \item Characterized the performance of several components of the HPS SVT
                                     including the APV25 readout chips and silicon microstrip modules at various stages
                                     of production.
+                              \item Key member of team that assembled, installed and commissioned the HPS SVT.
                           \end{itemize} 
                       } 
         \experienceentry{2009-2011}
@@ -165,22 +164,20 @@
                             \end{itemize}
                         } 
         \experienceentry{2007-2009}
-                        {Graduate Student Researcher}
+                        {Graduate Student Researcher, GEP-III Collaboration}
                         {Department of Physics and Astronomy, California State University, Los Angeles}
                         {Los Angeles, CA}
                         {
                             \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
                                 \item Developed C++ analysis used to optimize detector selection criteria using regression
                                       techniques and frequentist inference resulting in an improved understanding of the
-                                    interaction of the proton in polyethylene.
-                                \item Developed maximum likelihood fitter to determine the parameters of a model describing
-                                      the polarization of the proton.
+                                      interaction of the proton in polyethylene.
                                 \item Performed statistical analysis to measure the form factor ratio, $G_{E_p}/G_{M_p}$, of
                                       the proton using blind analysis techniques.
                             \end{itemize}
                         }  
         \experienceentry{2005-2006}
-                        {Undergraduate Researcher}
+                        {Undergraduate Researcher, BaBar Collaboration}
                         {Department of Physics and Astronomy, University of California, Irvine}
                         {Irvine, CA}
                         { 
@@ -189,7 +186,6 @@
                                       $B\rightarrow e^+e^-$ using blind analysis and regression techniques.
                                 \item Used a neural network to boost the identification of the particle decay 
                                       $\Lambda \rightarrow p \pi^-$ by 10\%.
-                                \item Utilized C++ to analyze, visualize, and clean up over 1 TB of noisy data.
                             \end{itemize}
                        } 
         \experienceentry{2000-2001}
@@ -199,13 +195,13 @@
                         {
                             \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
                                 \item Designed and constructed a device used to evaluate the skin-friction reduction 
-                                      of several Micro-Blowing Technique skins at supersonic speeds. 
+                                      of several Micro -Blowing Technique skins at supersonic speeds. 
                             \end{itemize}
                         } 
     
     \cvsection{Skills}
         \skillsentry{Prog. Languages}{Java, C++, C, Python, MySQL, XML, Mathematica. Familiar with with HTML5 and Fortran}
-        \skillsentry{Tools}{Linux, NumPy, Matplotlib, scikit-learn, git, SVN, CMake, IPython, \LaTeX, ROOT, RooFit}
+        \skillsentry{Tools}{Linux, NumPy, Matplotlib, scikit-learn, scipy, git, SVN, CMake, \LaTeX, ROOT, RooFit}
         \skillsentry{Languages}{Fluent in English and Spanish}
 
     \cvsection{Fellowships and Honors}
@@ -215,7 +211,7 @@
                          {California State University, Los Angeles}
         \awardentry{2009}{Margaziotis Award for Best Experimental Research}
                          {California State University, Los Angeles}
-        \awardentry{2007-2009}{Louis Stokes Alliance for Minority Participation Bridge to the Doctorate Fellowship}
+        \awardentry{2007-2009}{LSAMP Bridge to the Doctorate Fellowship}
                               {National Science Foundation} 
         \awardentry{2006}{California Alliance for Minority Participation Mentor of the Year}
                          {University of California, Irvine}
@@ -227,7 +223,11 @@
     \cvsection{Teaching Experience}
         \teachingentry{2013-2015}{GRE Physics Bootcamp Instructor}
                       {Department of Physics, University of California, Santa Cruz}
-                      {}
+                      {
+                        \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
+                            \item Thought undergraduate level quantum mechanics.                                 
+                          \end{itemize}
+                      }
 
         \teachingentry{2009-2011}{Graduate Teaching Assistant}
                       {Department of Physics, University of California, Santa Cruz}
@@ -250,6 +250,7 @@
                       }
 
     \cvsection{Publications}
+    \vspace{-22pt}
 
     \bibliography{publications}
     \bibliographystyle{unsrt}
