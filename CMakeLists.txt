@@ -27,3 +27,5 @@ add_latex_document(publications.tex
     BIBFILES publications.bib
 )
 
+# Add cover letter to the build
+add_latex_document(cover_letter.tex)
