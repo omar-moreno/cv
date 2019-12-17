@@ -1,6 +1,6 @@
 %
-% @file cv.tex
-% @author Omar Moreno
+% cv.tex
+% Omar Moreno
 %
 
 \documentclass[11pt]{article}
@@ -13,7 +13,7 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 
 % Package that allows setting of page geometry e.g. margins
-\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage[top=0.5in, bottom=0.5in, left=0.75in, right=0.75in]{geometry}
 
 %
 \usepackage{enumitem}
@@ -42,12 +42,12 @@
 % Use the font Computer Modern Sans Serif
 \renewcommand*{\familydefault}{\sfdefault}
 
-% Define Dim Gray color 
+% Define some colors
 \definecolor{dimgray}{HTML}{696969}
 \definecolor{indigodye}{HTML}{0D4F8B}
 
 %
-% resumesection : Command used to denote a new section of the CV
+% resumesection : A CV section
 % 
 % #1 Name of the section
 %
@@ -56,6 +56,15 @@
     \textcolor{indigodye}{\rule{.15\textwidth}{.1in} \hspace{0.01 \textwidth} \textbf{\Large{#1}}} \newline 
 }
 
+%
+% educationentry : An entry in the "Education" section.
+%
+% #1 Year degree received
+% #2 Degree type
+% #3 Institution
+% #4 City, State
+% #5 Thesis, Disseration title
+%
 \newcommand{\educationentry}[5] { 
     \noindent
     \begin{minipage}[t]{0.15\textwidth} \begin{flushright} #1 \end{flushright} \end{minipage} \hspace{0.01\textwidth}
@@ -66,17 +75,10 @@
     \end{minipage}
 }
 
-\newcommand{\experienceentrycollab}[6] { 
-    \noindent
-    \begin{minipage}[t]{0.15\textwidth} \begin{flushright} #1 \end{flushright} \end{minipage} \hspace{0.01\textwidth}
-    \begin{minipage}[t]{0.84\textwidth} 
-        \textbf{#2} \newline
-        \emph{#3}, #4 \newline
-        Collaborations: #5
-    \end{minipage} \\[0.01pt]
-    #6 \vspace{11pt}
-}
-
+%
+% experienceentry : An entry in the "Research Experience" section.
+%
+%
 \newcommand{\experienceentry}[5] { 
     \noindent
     \begin{minipage}[t]{0.15\textwidth} \begin{flushright} #1 \end{flushright} \end{minipage} \hspace{0.01\textwidth}
@@ -128,7 +130,7 @@
     \noindent
     \begin{minipage}[c]{0.5\textwidth}
         \begin{flushleft}
-            \Huge{Omar Moreno} \newline
+            \Huge{Omar \textcolor{indigodye}{\textbf{Moreno}}} \newline
             \Large{\textcolor{dimgray}{Curriculum Vitae}}
         \end{flushleft}
     \end{minipage}
@@ -149,139 +151,121 @@
                        {University of California at Santa Cruz}
                        {Santa Cruz, CA}
                        {Dissertation: Search for a Heavy Photon in the 2015 Engineering Run Data of the Heavy Photon Search Experiment}
-%                       {John Jaros}
         \educationentry{2009}
                        {M.Sc. in Physics}
                        {California State University, Los Angeles}
                        {Los Angeles, CA}
-                       {Thesis: Measurement of the Analyzing Power for the Reactions $p + CH_{2}
-                       \rightarrow X$ at a \\ Proton Momentum of 2.2032 GeV/c}
-%                       {Konrad Aniol} 
+                       {Thesis: Measurement of the Analyzing Power for the Reactions $p + CH_{2} \rightarrow X$ at a Proton Momentum of 2.2032 GeV/c}
         \educationentry{2006}
                        {B.Sc. in Applied Physics}
                        {University of California at Irvine}
                        {Irvine, CA}
                        {Thesis: Search for the $B\rightarrow e^+e^-$ as a Hint to Supersymmetry}
-%                       {David Kirkby}
 
     \cvsection{Research Experience}
-        \experienceentrycollab{2016-present}
+        \experienceentry{2016-present}
                         {Research Associate}
                         {SLAC National Accelerator Laboratory}
                         {Menlo Park, CA}
-                        {Light Dark Matter eXperiment, Heavy Photon Search, APEX}
-                        {   
-                            \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
-                                \item Leading the development of a Geant4, C++ based simulation and reconstruction 
-                                      framework for the Light Dark Matter eXperiment (LDMX).
-                                \item Used machine learning techniques to identify and veto rare backgrounds (e.g.
-                                      photo/electro-nuclear) expected by LDMX.
-                                \item Managed the production and reconstruction of large ($\sim$10 billion) signal and
-                                      background samples that were used to study the sensitivity of LDMX to several 
-                                      physics scenarios.
-                                \item Played a key role in both the comissioning of the Heavy Photon Search 
-                                      (HPS) silicon vertex tracker (SVT) data acquisition system and its integration
-                                      with JLab's Hall B central data acquisition system for the 2019 run.
-                                \item Conducted a resonance search for a new gauge boson (dark photon) in the mass range 
-                                      19 MeV/c$^2$ to 81 MeV/c$^2$ leading to the first physics publication by the
-                                      Heavy Photon Search experiment.
-                                      %utilizing frequentist statistical analysis and 
-                                      %maximum likelihood techniques.
-                                %\item Lead developer of the Heavy Photon Search Toolkit for Reconstruction framework
-                                %      to be used for analysis of data collected in future runs.
-                                \item Mentored HPS graduate students and post-docs on machine learning, 
-                                      analysis and data acquisition projects.
-                                \item Mentored LDMX undergraduates, graduate students and post-docs on 
-                                      machine learning, simulation and reconstruction projects.
-                            \end{itemize} 
+                        {                   
+            \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
+                \item Leading the development of a Geant4, C++ based simulation and reconstruction 
+                      framework for the Light Dark Matter eXperiment (LDMX).
+                \item Applied machine learning techniques to identify and veto rare photon-induced reactions
+                      (e.g. photo-nuclear) expected to be the dominant background for LDMX.     
+                \item Managed the production and reconstruction of large signal and background 
+                      samples ($\sim$10 billion total) that were used to study the sensitivity of LDMX 
+                      to several physics scenarios.
+                \item Played a key role in the installation and commissioning of the upgraded Heavy Photon Search 
+                      (HPS) silicon vertex tracker (SVT) and the integration of the data acquisition
+                      system with Jefferson Lab's Hall-B central data acquisition system for the 2019 run.
+                \item Conducted a resonance search for a new gauge boson (dark photon) in the mass range 
+                      19 MeV/c$^2$ to 81 MeV/c$^2$ leading to the first physics publication by the
+                      Heavy Photon Search experiment.
+                \item Mentored HPS graduate students and post-docs on machine learning, 
+                      analysis and data acquisition projects.
+                \item Mentored LDMX undergraduates, graduate students and post-docs on 
+                      machine learning, simulation and reconstruction projects.
+            \end{itemize} 
                         } 
-        \experienceentrycollab{2011-2016}
+        \experienceentry{2011-2016}
                         {Graduate Student Researcher}
                         {Santa Cruz Institute for Particle Physics}
                         {Santa Cruz, CA}
-                        {Heavy Photon Search}
                         {   
-                            \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
-                                \item Lead developer of both the analysis pipeline and statistical package
-                                      used to conduct a resonance search for a new fundamental particle.
-                                      %, 
-                                      %dark photon, thought to mediate dark matter interactions.
-                                    %$\item Utilized frequentist statistical analysis and maximum likelihood estimation to conduct a 
-                              %      resonance search for a new fundamental particle, heavy photon, thought to mediate dark matter 
-                              %      interactions.
-                              %\item Applied machine learning techniques  
-                              %      to reject trident and wide angle brem backgrounds.
-                                    %using a Random Forest Algorithm in Scikit-Learn, boosting the 
-                                    %signal/background fraction by 40\%.
-                              \item Co-creator of both a C++ and Java analysis pipeline used to clean up and process
-                                    data into physics objects.
-                              %      and visualize over 10 TB of noisy data (detector output).
-                              %\item Developed Java front end used to load and retrieve greater than 100,000 
-                              %      calibration constants from a MySQL database.
-                              \item Tested and commissioned the HPS SVT data acquisition system used for the 2015 and
-                                    2016 engineering runs. 
-                                    %used to continuously read out 23,004 channels at a rate of up to
-                                    %50 kHz.
-                              \item Characterized the performance of several 
-                                    components of the HPS SVT including the front end readout boards and the silicon 
-                                    microstrip modules at various stages of production.
-                              \item Key member of team that assembled, installed and commissioned the HPS SVT.
-                          \end{itemize} 
+            \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
+                \item Lead developer of both the analysis pipeline and statistical package
+                      used to conduct a resonance search for a new fundamental particle.
+                %$\item Utilized frequentist statistical analysis and maximum likelihood estimation to conduct a 
+                %      resonance search for a new fundamental particle, heavy photon, thought to mediate dark matter 
+                %      interactions.
+                %\item Applied machine learning techniques  
+                %      to reject trident and wide angle brem backgrounds.
+                %using a Random Forest Algorithm in Scikit-Learn, boosting the 
+                %signal/background fraction by 40\%.
+                \item Co-creator of both a C++ and Java data processing pipeline used to 
+                      clean up, reconstruct, and visualize over 50 TB of noisy detector data. 
+                %\item Developed Java front end used to load and retrieve greater than 100,000 
+                 %      calibration constants from a MySQL database.
+                \item Tested and commissioned the HPS SVT data acquisition system used for the 2015 and
+                      2016 engineering runs. 
+                      %used to continuously read out 23,004 channels at a rate of up to
+                      %50 kHz.
+                \item Characterized the performance of several components of the HPS
+                      SVT including the front end readout boards and the silicon microstrip
+                      modules at various stages of production.
+                \item Key member of team that assembled, installed and 
+                      commissioned the HPS SVT.
+            \end{itemize} 
                       } 
-        \experienceentrycollab{2009-2011}
+        \experienceentry{2009-2011}
                         {Graduate Student Researcher}
                         {Santa Cruz Institute for Particle Physics}
                         {Santa Cruz, CA}
-                        {International Linear Collider}
                         {
-                            \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
-                                \item Characterized the performance of the Long Shaping Time Front End readout chip at
-                                      various stages of development.
-                                  %\item Mentored several undergraduate students on various projects.
-                            \end{itemize}
+            \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
+                \item Characterized the performance of the Long Shaping Time Front End readout chip at
+                      various stages of development.
+            \end{itemize}
                         } 
-        \experienceentrycollab{2007-2009}
+        \experienceentry{2007-2009}
                         {Graduate Student Researcher}
                         {Department of Physics and Astronomy, California State University, Los Angeles}
                         {Los Angeles, CA}
-                        {GEP-III}
                         {
-                            \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
-                                %\item Developed C++ analysis used to optimize detector selection criteria using regression
-                                %      techniques and frequentist inference resulting in an improved understanding of the
-                                %      interaction of the proton in polyethylene.
-                                \item Used likelihood techniques to measure the form factor ratio, $G_{E_p}/G_{M_p}$, of
-                                      the proton.
-                                %using blind analysis techniques.
-                            \end{itemize}
+            \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
+                %\item Developed C++ analysis used to optimize detector selection criteria using regression
+                %      techniques and frequentist inference resulting in an improved understanding of the
+                %      interaction of the proton in polyethylene.
+                \item Used likelihood techniques to measure the form factor ratio, $G_{E_p}/G_{M_p}$, of
+                      the proton.
+            \end{itemize}
                         }  
-        \experienceentrycollab{2005-2006}
+        \experienceentry{2005-2006}
                         {Undergraduate Researcher}
                         {Department of Physics and Astronomy, University of California, Irvine}
                         {Irvine, CA}
-                        {BaBar}
                         { 
-                            \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
-                                \item Developed analysis to measure the branching fraction for the extremely rare decay 
-                                      $B\rightarrow e^+e^-$.
-                                %using blind analysis and regression techniques.
-                                \item Used a neural network to boost the identification of the particle decay 
-                                      $\Lambda \rightarrow p \pi^-$ by 10\%.
-                            \end{itemize}
+            \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
+                \item Developed analysis to measure the branching fraction for the extremely rare decay \\ 
+                      $B\rightarrow e^+e^-$.
+                \item Used a neural network to boost the identification of the particle decay 
+                      $\Lambda \rightarrow p \pi^-$ by 10\%.
+            \end{itemize}
                        } 
-        \experienceentry{2000-2001}
-                        {Mechanical Engineering Apprentice}
-                        {Nasa Dryden Flight Research Center}
-                        {Edwards, CA}
-                        {
-                            \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
-                                \item Designed and constructed a device used to evaluate the skin-friction reduction 
-                                      of several Micro -Blowing Technique skins at supersonic speeds. 
-                            \end{itemize}
-                        } 
+        %\experienceentry{2000-2001}
+        %                {Mechanical Engineering Apprentice}
+        %                {Nasa Dryden Flight Research Center}
+        %                {Edwards, CA}
+        %                {
+        %                    \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
+        %                        \item Designed and constructed a device used to evaluate the skin-friction reduction 
+        %                              of several Micro -Blowing Technique skins at supersonic speeds. 
+        %                    \end{itemize}
+        %                } 
     
     \cvsection{Skills}
-        \skillsentry{Prog. Languages}{bash, C, C++, Java, MySQL, Python. Familiar with with HTML5 and Fortran}
+        \skillsentry{Prog. Lang.}{bash, C, C++, Java, MySQL, Python. Familiar with with HTML5 and Fortran}
         \skillsentry{Tools}{Geant4, git, \LaTeX, Linux, matplotlib, numpy, ROOT, RooFit, tensorflow, scipy, CMake}
         \skillsentry{Languages}{Fluent in English and Spanish}
 
@@ -306,7 +290,7 @@
 
     \cvsection{Leadership}
         \leadentry{2019-present}{Member of the Heavy Photon Search Excecutive Committee}
-        \leadentry{2016-present}{Coordinator of the LDMX Software and Computing Working Group}
+        \leadentry{2017-present}{Coordinator of the LDMX Software and Computing Working Group}
         \leadentry{2016-2017}{Leader of the HPS Tracking Working Group}
         \leadentry{2015-2018}{Leader of the Resonance Search Working Group}
 
@@ -337,42 +321,48 @@
                             \item Physics 213 - Electricity and Magnetism 
                         \end{itemize}
                       }
-    
+   
+    \clearpage
     \cvsection{Invited Talks}
+        \vspace{-11pt}
+        \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=.03\textwidth]
+            \item Moreno, O. \emph{Visible Dark Sector Probes.}
+                  Light Dark Matter at Accelerators 2019. (2019). Venice, Italy. 
+            \item Moreno, O. \emph{Accelerating Dark Matter}. 
+                  Seminar given at the Dipartimento di Fisica, Università di Roma Tor Vergata.
+                  (2018). Rome, Italy.
+            \item Moreno, O. \emph{Accelerating Dark Matter}. 
+                  Seminar given at the Dipartimento di Fisica, Università degli Studi di Torino.
+                  (2018). Turin, Italy.  
+            \item Moreno, O. \emph{Accelerating Dark Matter}. 
+                  Seminar given at the Istituto Nazionale di Fisica Nucleare Genova.
+                  (2018). Genoa, Italy. 
+            \item Moreno, O. \emph{Probing the Dark World with Accelerators}. 
+                  Seminar given at the Dipartamento di Chimica, Università degli Studi di Sassari.
+                  (2018). Sassari, Italy. 
+            \item Moreno, O. \emph{The Heavy Photon Search Experiment}. 
+                  Fermi National Accelerator Laborary LHC Physics Center Topic of the Week. (2018). Batavia, IL.
+            \item Moreno, O. \emph{First Results from the Heavy Photon Search.}
+                  Jefferson Lab Physics Seminar. (2017). Newport News, VA.
+            \item Moreno, O. \emph{The Heavy Photon Search Experiment.}
+                  U.S. Cosmic Visions: New Ideas in Dark Matter. (2017). College Park, MD.  
+        \end{itemize}
+        \vspace{11pt}
 
-    \noindent
-    [1] O. Moreno, Accelerating Dark Matter,
-        \emph{Dipartimento di Fisica, Università di Roma Tor Vergata}, 2018 
-    
-    \noindent
-    [2] O. Moreno, Accelerating Dark Matter,
-        \emph{Dipartimento di Fisica, Università degli Studi di Torino}, 2018 
-    
-    \noindent
-    [3] O. Moreno, Accelerating Dark Matter,
-        \emph{Dipartimento di Fisica, Università degli Studi di Genova}, 2018 
-
-    \noindent
-    [4] O. Moreno, Shedding Light on Dark Matter, 
-        \emph{Dipartamento di Chimica, Università degli Studi di Sassari}, 2018  
-
-    \noindent
-    [5] O. Moreno, The Heavy Photon Search Experiment, 
-        \emph{LHC Physics Center Topic Of The Week}, 2018 
-
-    \noindent
-    [6] O. Moreno, First Results from the Heavy Photon Search, 
-        \emph{JLab Physics Seminar}, 2017 
-    
-    \noindent
-    [7] O. Moreno, The Heavy Photon Search Experiment, 
-        \emph{U.S. Cosmic Visions: New Ideas in Dark Matter}, 2017 \\
-
-    %\newpage
     \cvsection{Publications}
     \vspace{-22pt}
 
     \begin{thebibliography}{99}
+
+        \bibitem{Ankowski:2019mfd} 
+            A.~M.~Ankowski, A.~Friedland, S.~W.~Li, O.~Moreno, P.~Schuster, N.~Toro and N.~Tran,
+            \emph{Lepton-Nucleus Cross Section Measurements for DUNE with the LDMX Detector},
+            arXiv:1912.06140 [hep-ph].
+
+        \bibitem{Akesson:2019iul} 
+            T.~Åkesson {\it et al.} [LDMX Collaboration],
+            \emph{A High Efficiency Photon Veto for the Light Dark Matter eXperiment},
+            arXiv:1912.05535 [hep-ex].
 
         \bibitem{Adrian:2018scb} 
             P.~H.~Adrian {\it et al.} [HPS Collaboration],
