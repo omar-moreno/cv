@@ -45,6 +45,7 @@
 % Define some colors
 \definecolor{dimgray}{HTML}{696969}
 \definecolor{indigodye}{HTML}{0D4F8B}
+\definecolor{lighterblue}{HTML}{1766A6}
 
 %
 % resumesection : A CV section
@@ -69,8 +70,8 @@
     \noindent
     \begin{minipage}[t]{0.15\textwidth} \begin{flushright} #1 \end{flushright} \end{minipage} \hspace{0.01\textwidth}
     \begin{minipage}[t]{0.84\textwidth} 
-        \textbf{#2}, \emph{#3}, #4 \newline 
-        #5 \newline
+        \textbf{#2}, \emph{#3}, #4 
+%        #5 \newline
 %        Advisor: #6 \newline 
     \end{minipage}
 }
@@ -81,11 +82,15 @@
 %
 \newcommand{\experienceentry}[5] { 
     \noindent
-    \begin{minipage}[t]{0.15\textwidth} \begin{flushright} #1 \end{flushright} \end{minipage} \hspace{0.01\textwidth}
+    %\begin{minipage}[t]{0.15\textwidth} ~ \end{minipage} \hspace{0.01\textwidth}
     \begin{minipage}[t]{0.84\textwidth} 
-        \textbf{#2} \newline
-        \emph{#3}, #4
+      \textbf{#1, #2}
     \end{minipage} \\[0.01pt]
+    \begin{minipage}[t]{0.15\textwidth} \begin{flushright} #3 \end{flushright} \end{minipage} \hspace{0.01\textwidth}
+    \begin{minipage}[t]{0.84\textwidth} 
+      \textbf{\textcolor{indigodye}{#4}} \vspace{5pt} %\newline
+    \end{minipage} 
+    %\\[0.01pt]
     #5 \vspace{11pt}
 }
 
@@ -163,35 +168,36 @@
                        {Thesis: Search for the $B\rightarrow e^+e^-$ as a Hint to Supersymmetry}
 
     \cvsection{Research Experience}
-        \experienceentry{2016-present}
-                        {Research Associate}
-                        {SLAC National Accelerator Laboratory}
-                        {Menlo Park, CA}
+        \experienceentry{SLAC National Accelerator Laboratory}{Menlo Park, CA}
+                        {2020-present \\ 2016-2020}
+                        {Project Scientist \\ Research Associate}
                         {                   
             \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
-                \item Leading the development of a Geant4, C++ based simulation and reconstruction 
+                \item Coordinating the development of a Geant4 based simulation and reconstruction 
                       framework for the Light Dark Matter eXperiment (LDMX).
+                \item Studied the ability of the LDMX detector to perform electron-nucleus cross-section
+                      \\ measurements useful to improving the modeling of neutrino-nucleus 
+                      interactions.
                 \item Applied machine learning techniques to identify and veto rare photon-induced reactions
                       (e.g. photo-nuclear) expected to be the dominant background for LDMX.     
-                \item Managed the production and reconstruction of large signal and background 
-                      samples ($\sim$10 billion total) that were used to study the sensitivity of LDMX 
+                \item Use high performance computing techniques to produce large Monte Carlo data sets
+                      (~$\sim$10 billion per set) that were used to study the sensitivity of LDMX 
                       to several physics scenarios.
                 \item Played a key role in the installation and commissioning of the upgraded Heavy Photon Search 
-                      (HPS) silicon vertex tracker (SVT) and the integration of the data acquisition
+                      (HPS) silicon vertex tracker (SVT) and the integration its data acquisition
                       system with Jefferson Lab's Hall-B central data acquisition system for the 2019 run.
                 \item Conducted a resonance search for a new gauge boson (dark photon) in the mass range 
                       19 MeV/c$^2$ to 81 MeV/c$^2$ leading to the first physics publication by the
-                      Heavy Photon Search experiment.
+                      HPS experiment.
                 \item Mentored HPS graduate students and post-docs on machine learning, 
                       analysis and data acquisition projects.
                 \item Mentored LDMX undergraduates, graduate students and post-docs on 
                       machine learning, simulation and reconstruction projects.
             \end{itemize} 
                         } 
-        \experienceentry{2011-2016}
+        \experienceentry{Santa Cruz Institute for Particle Physics}{Santa Cruz, CA}
+                        {2011-2016}
                         {Graduate Student Researcher}
-                        {Santa Cruz Institute for Particle Physics}
-                        {Santa Cruz, CA}
                         {   
             \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
                 \item Lead developer of both the analysis pipeline and statistical package
@@ -203,8 +209,8 @@
                 %      to reject trident and wide angle brem backgrounds.
                 %using a Random Forest Algorithm in Scikit-Learn, boosting the 
                 %signal/background fraction by 40\%.
-                \item Co-creator of both a C++ and Java data processing pipeline used to 
-                      clean up, reconstruct, and visualize over 50 TB of noisy detector data. 
+                \item Co-creator Java data processing pipeline used to 
+                      clean up, reconstruct, and visualize over 500 TB of noisy detector data. 
                 %\item Developed Java front end used to load and retrieve greater than 100,000 
                  %      calibration constants from a MySQL database.
                 \item Tested and commissioned the HPS SVT data acquisition system used for the 2015 and
@@ -217,21 +223,21 @@
                 \item Key member of team that assembled, installed and 
                       commissioned the HPS SVT.
             \end{itemize} 
-                      } 
-        \experienceentry{2009-2011}
+                      }
+                      \newpage
+        \experienceentry{Santa Cruz Institute for Particle Physics}{Santa Cruz, CA}
+                        {2009-2011}
                         {Graduate Student Researcher}
-                        {Santa Cruz Institute for Particle Physics}
-                        {Santa Cruz, CA}
                         {
             \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
                 \item Characterized the performance of the Long Shaping Time Front End readout chip at
                       various stages of development.
             \end{itemize}
                         } 
-        \experienceentry{2007-2009}
+        \experienceentry{Department of Physics and Astronomy, California State University, Los Angeles}
+                        {CA}
+                        {2007-2009}
                         {Graduate Student Researcher}
-                        {Department of Physics and Astronomy, California State University, Los Angeles}
-                        {Los Angeles, CA}
                         {
             \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
                 %\item Developed C++ analysis used to optimize detector selection criteria using regression
@@ -241,10 +247,10 @@
                       the proton.
             \end{itemize}
                         }  
-        \experienceentry{2005-2006}
+        \experienceentry{Department of Physics and Astronomy, University of California, Irvine}
+                        {CA}
+                        {2005-2006}
                         {Undergraduate Researcher}
-                        {Department of Physics and Astronomy, University of California, Irvine}
-                        {Irvine, CA}
                         { 
             \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
                 \item Developed analysis to measure the branching fraction for the extremely rare decay \\ 
@@ -289,43 +295,44 @@
                          {University of California, Irvine}
 
     \cvsection{Leadership}
-        \leadentry{2019-present}{Member of the Heavy Photon Search Excecutive Committee}
+        \leadentry{2019-present}{Member of the Heavy Photon Search Executive Committee}
         \leadentry{2017-present}{Coordinator of the LDMX Software and Computing Working Group}
         \leadentry{2016-2017}{Leader of the HPS Tracking Working Group}
         \leadentry{2015-2018}{Leader of the Resonance Search Working Group}
 
-    \cvsection{Teaching Experience}
-        \teachingentry{2013-2015}{GRE Physics Bootcamp Instructor}
-                      {Department of Physics, University of California, Santa Cruz}
-                      {
-                        \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
-                            \item Taught undergraduate level quantum mechanics.                                 
-                          \end{itemize}
-                      }
+    %\cvsection{Teaching Experience}
+    %    \teachingentry{2013-2015}{GRE Physics Bootcamp Instructor}
+    %                  {Department of Physics, University of California, Santa Cruz}
+    %                  {
+    %                    \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
+    %                        \item Taught undergraduate level quantum mechanics.                                 
+    %                      \end{itemize}
+    %                  }
 
-        \teachingentry{2009-2011}{Graduate Teaching Assistant}
-                      {Department of Physics, University of California, Santa Cruz}
-                      {
-                        \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
-                            \item Physics 6A - Mechanics                                 
-                            \item Physics 6B - Waves and Thermodynamics                  
-                            \item Physics 6C - Electricity and Magnetism                
-                          \end{itemize}
-                      }
+    %    \teachingentry{2009-2011}{Graduate Teaching Assistant}
+    %                  {Department of Physics, University of California, Santa Cruz}
+    %                  {
+    %                    \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
+    %                        \item Physics 6A - Mechanics                                 
+    %                        \item Physics 6B - Waves and Thermodynamics                  
+    %                        \item Physics 6C - Electricity and Magnetism                
+    %                      \end{itemize}
+    %                  }
 
-        \teachingentry{2007}{Graduate Teaching Assistant}
-                      {Department of Physics and Astronomy, California State University, Los Angeles}
-                      {  
-                        \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
-                            \item Physics 211 - Classical Mechanics                      
-                            \item Physics 213 - Electricity and Magnetism 
-                        \end{itemize}
-                      }
+    %    \teachingentry{2007}{Graduate Teaching Assistant}
+    %                  {Department of Physics and Astronomy, California State University, Los Angeles}
+    %                  {  
+    %                    \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=0.19\textwidth]
+    %                        \item Physics 211 - Classical Mechanics                      
+    %                        \item Physics 213 - Electricity and Magnetism 
+    %                    \end{itemize}
+    %                  }
    
-    \clearpage
     \cvsection{Invited Talks}
         \vspace{-11pt}
         \begin{itemize}[label=\textcolor{indigodye}{$\circ$}, noitemsep, nolistsep, leftmargin=.03\textwidth]
+            \item Moreno, O. \emph{Accelerator Based Searches for Dark Matter.}
+                  Jefferson Lab Hall B Experimental Seminar. (2020). Newport News, VA.
             \item Moreno, O. \emph{Visible Dark Sector Probes.}
                   Light Dark Matter at Accelerators 2019. (2019). Venice, Italy. 
             \item Moreno, O. \emph{Accelerating Dark Matter}. 
@@ -341,7 +348,7 @@
                   Seminar given at the Dipartamento di Chimica, Università degli Studi di Sassari.
                   (2018). Sassari, Italy. 
             \item Moreno, O. \emph{The Heavy Photon Search Experiment}. 
-                  Fermi National Accelerator Laborary LHC Physics Center Topic of the Week. (2018). Batavia, IL.
+                  Fermi National Accelerator Laboratory LHC Physics Center Topic of the Week. (2018). Batavia, IL.
             \item Moreno, O. \emph{First Results from the Heavy Photon Search.}
                   Jefferson Lab Physics Seminar. (2017). Newport News, VA.
             \item Moreno, O. \emph{The Heavy Photon Search Experiment.}
@@ -353,68 +360,70 @@
     \vspace{-22pt}
 
     \begin{thebibliography}{99}
+      \bibitem{Fadeyev:2020ydo}
+        V.~Fadeyev {\it et al.} 
+        \emph{Design and performance of silicon strip sensors with slim edges for HPS experiment},
+        \\ Nucl. Instrum. Meth. A \textbf{969}, 163991 (2020)
+    
+      \bibitem{Ankowski:2019mfd}
+        A.~M.~Ankowski {\it et al.}
+        \emph{Lepton-Nucleus Cross Section Measurements for DUNE with the LDMX Detector},
+        Phys. Rev. D \textbf{101}, no.5, 053004 (2020)  
+        arXiv:1912.06140 [hep-ph].
 
-        \bibitem{Ankowski:2019mfd} 
-            A.~M.~Ankowski, A.~Friedland, S.~W.~Li, O.~Moreno, P.~Schuster, N.~Toro and N.~Tran,
-            \emph{Lepton-Nucleus Cross Section Measurements for DUNE with the LDMX Detector},
-            arXiv:1912.06140 [hep-ph].
+      \bibitem{Akesson:2019iul} 
+        T.~Åkesson {\it et al.} [LDMX Collaboration],
+        \emph{A High Efficiency Photon Veto for the Light Dark Matter eXperiment},
+        JHEP \textbf{04}, 003 (2020)
+        arXiv:1912.05535 [hep-ex].
 
-        \bibitem{Akesson:2019iul} 
-            T.~Åkesson {\it et al.} [LDMX Collaboration],
-            \emph{A High Efficiency Photon Veto for the Light Dark Matter eXperiment},
-            arXiv:1912.05535 [hep-ex].
-
-        \bibitem{Adrian:2018scb} 
-            P.~H.~Adrian {\it et al.} [HPS Collaboration],
-            \emph{Search for a dark photon in electroproduced $e^{+}e^{-}$ pairs with the Heavy Photon Search experiment at JLab},
-            Phys.\ Rev.\ D {\bf 98}, no. 9, 091101 (2018)
-            arXiv:1807.11530 [hep-ex].
+       \bibitem{Adrian:2018scb} 
+         P.~H.~Adrian {\it et al.} [HPS Collaboration],
+         \emph{Search for a dark photon in electroproduced $e^{+}e^{-}$ pairs with the Heavy Photon Search experiment at JLab},
+         Phys.\ Rev.\ D {\bf 98}, no. 9, 091101 (2018)
+         arXiv:1807.11530 [hep-ex].
         
-        \bibitem{Akesson:2018vlm} 
-            T.~Åkesson {\it et al.} [LDMX Collaboration],
-            \emph{Light Dark Matter eXperiment (LDMX)},
+       \bibitem{Akesson:2018vlm} 
+         T.~Åkesson {\it et al.} [LDMX Collaboration],
+         \emph{Light Dark Matter eXperiment (LDMX)},
             arXiv:1808.05219 [hep-ex].
 
-        \bibitem{Puckett:2017flj} 
-            A.~J.~R.~Puckett {\it et al.},
-            \emph{Polarization Transfer Observables in Elastic Electron Proton Scattering at $Q^2 = $2.5, 5.2, 6.8, and 8.5 GeV$^2$},
-            Phys.\ Rev.\ C {\bf 96}, no. 5, 055203 (2017)
-            Erratum: [Phys.\ Rev.\ C {\bf 98}, no. 1, 019907 (2018)]
-            arXiv:1707.08587 [nucl-ex].
+       \bibitem{Puckett:2017flj} 
+         A.~J.~R.~Puckett {\it et al.} [GEp-III Collaboration],
+         \emph{Polarization Transfer Observables in Elastic Electron Proton Scattering at $Q^2 = $2.5, 5.2, 6.8, and 8.5 GeV$^2$},
+         Phys.\ Rev.\ C {\bf 96}, no. 5, 055203 (2017)
+         Erratum: [Phys.\ Rev.\ C {\bf 98}, no. 1, 019907 (2018)]
+         arXiv:1707.08587 [nucl-ex].
 
-        \bibitem{Puckett:2017egz} 
-            A.~J.~R.~Puckett {\it et al.},
-            \emph{Technical Supplement to "Polarization Transfer Observables in Elastic Electron-Proton Scattering at Q$^2$ = 2.5, 5.2, 6.8, and 8.5 GeV$^2$"},
-            Nucl.\ Instrum.\ Meth.\ A {\bf 910}, 54 (2018)
-            [arXiv:1707.07750 [nucl-ex]].
+       \bibitem{Puckett:2017egz} 
+         A.~J.~R.~Puckett {\it et al.},
+         \emph{Technical Supplement to "Polarization Transfer Observables in Elastic Electron-Proton Scattering at Q$^2$ = 2.5, 5.2, 6.8, and 8.5 GeV$^2$"},
+         Nucl.\ Instrum.\ Meth.\ A {\bf 910}, 54 (2018)
+         arXiv:1707.07750 [nucl-ex].
 
-        \bibitem{Battaglieri:2014hga} 
-            M.~Battaglieri {\it et al.},
-            ``The Heavy Photon Search Test Detector,''
-            Nucl.\ Instrum.\ Meth.\ A {\bf 777}, 91 (2015)
-            doi:10.1016/j.nima.2014.12.017
-            [arXiv:1406.6115 [physics.ins-det]].
+       \bibitem{Battaglieri:2014hga} 
+         M.~Battaglieri {\it et al.},
+         \emph{The Heavy Photon Search Test Detector},
+         Nucl.\ Instrum.\ Meth.\ A {\bf 777}, 91 (2015)
+         arXiv:1406.6115 [physics.ins-det].
 
-        \bibitem{Luo:2011uy} 
-            W.~Luo {\it et al.} [GEp-III and GEp2gamma Collaborations],
-            ``Polarization components in $\pi^{0}$ photoproduction at photon energies up to 5.6 GeV,''
-            Phys.\ Rev.\ Lett.\  {\bf 108}, 222004 (2012)
-            doi:10.1103/PhysRevLett.108.222004
-            [arXiv:1109.4650 [nucl-ex]].
+       \bibitem{Luo:2011uy} 
+         W.~Luo {\it et al.} [GEp-III and GEp2gamma Collaborations],
+         \emph{Polarization components in $\pi^{0}$ photoproduction at photon energies up to 5.6 GeV},
+         Phys.\ Rev.\ Lett.\  {\bf 108}, 222004 (2012)
+         arXiv:1109.4650 [nucl-ex].
 
-        \bibitem{Meziane:2010xc} 
-            M.~Meziane {\it et al.} [GEp2gamma Collaboration],
-            ``Search for effects beyond the Born approximation in polarization transfer observables in $\vec{e}p$ elastic scattering,''
-            Phys.\ Rev.\ Lett.\  {\bf 106}, 132501 (2011)
-            doi:10.1103/PhysRevLett.106.132501
-            [arXiv:1012.0339 [nucl-ex]].
+       \bibitem{Meziane:2010xc} 
+         M.~Meziane {\it et al.} [GEp2gamma Collaboration],
+         \emph{Search for effects beyond the Born approximation in polarization transfer observables in $\vec{e}p$ elastic scattering},
+         Phys.\ Rev.\ Lett.\  {\bf 106}, 132501 (2011)
+         arXiv:1012.0339 [nucl-ex].
 
-        \bibitem{Puckett:2010ac} 
-            A.~J.~R.~Puckett {\it et al.},
-            ``Recoil Polarization Measurements of the Proton Electromagnetic Form Factor Ratio to Q$^2$ = 8.5 GeV$^2$,''
-            Phys.\ Rev.\ Lett.\  {\bf 104}, 242301 (2010)
-            doi:10.1103/PhysRevLett.104.242301
-            [arXiv:1005.3419 [nucl-ex]].
+      \bibitem{Puckett:2010ac} 
+         A.~J.~R.~Puckett {\it et al.},
+         \emph{Recoil Polarization Measurements of the Proton Electromagnetic Form Factor Ratio to Q$^2$ = 8.5 GeV$^2$},
+         Phys.\ Rev.\ Lett.\  {\bf 104}, 242301 (2010)
+         arXiv:1005.3419 [nucl-ex].
 
     \end{thebibliography}
     \nocite{*}
